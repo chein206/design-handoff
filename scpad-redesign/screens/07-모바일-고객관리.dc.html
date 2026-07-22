@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;font-family:'Pretendard',-apple-system,sans-serif;}
+    .noscroll::-webkit-scrollbar{display:none;}
+  </style>
+</helmet>
+
+<div style="min-height:100vh;width:100%;background:#D8DBE1;display:flex;align-items:center;justify-content:center;padding:24px;">
+  <!-- phone -->
+  <div style="width:390px;height:830px;background:#000;border-radius:44px;padding:11px;box-shadow:0 30px 70px rgba(16,24,40,.35);">
+    <div style="width:100%;height:100%;background:#F3F4F6;border-radius:34px;overflow:hidden;display:flex;flex-direction:column;position:relative;">
+
+      <!-- status bar -->
+      <div style="height:44px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 26px;background:#fff;">
+        <span style="font-size:14px;font-weight:700;">9:41</span>
+        <div style="display:flex;align-items:center;gap:6px;">
+          <svg width="17" height="12" viewBox="0 0 18 12" fill="#1A1C20"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="5" y="4" width="3" height="8" rx="1"/><rect x="10" y="1.5" width="3" height="10.5" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1" opacity="0.35"/></svg>
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="#1A1C20"><path d="M8 2.5c2 0 3.8.8 5.2 2.1l1.3-1.4A9.5 9.5 0 0 0 8 .6 9.5 9.5 0 0 0 1.5 3.2l1.3 1.4A7.5 7.5 0 0 1 8 2.5z"/><path d="M8 6c1 0 2 .4 2.7 1.1l1.4-1.4A5.5 5.5 0 0 0 8 4a5.5 5.5 0 0 0-4.1 1.7l1.4 1.4A3.8 3.8 0 0 1 8 6z"/><circle cx="8" cy="9.8" r="1.6"/></svg>
+          <svg width="26" height="13" viewBox="0 0 26 13" fill="none"><rect x="0.5" y="0.5" width="22" height="12" rx="3.5" stroke="#1A1C20" opacity="0.4"/><rect x="2" y="2" width="17" height="9" rx="2" fill="#1A1C20"/><rect x="23.5" y="4" width="1.5" height="5" rx="0.75" fill="#1A1C20" opacity="0.4"/></svg>
+        </div>
+      </div>
+
+      <!-- app header -->
+      <div style="flex-shrink:0;background:#fff;padding:6px 18px 14px;border-bottom:1px solid #EEF0F2;">
+        <div style="display:flex;align-items:center;gap:9px;">
+          <div style="font-size:18px;font-weight:800;letter-spacing:.02em;">BYD <span style="color:#E4002B;">SCPAD</span></div>
+          <span style="font-size:9.5px;font-weight:800;color:#1E2128;background:#EDEEF1;padding:2px 7px;border-radius:5px;">MAX</span>
+          <span style="font-size:11.5px;color:#9AA0AB;font-weight:500;">9 / 무제한</span>
+          <div style="flex:1;"></div>
+          <button style="display:flex;align-items:center;gap:5px;padding:8px 13px;border:none;background:#E4002B;color:#fff;font-size:12.5px;font-weight:700;border-radius:9px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>새 고객
+          </button>
+        </div>
+        <!-- stat chips -->
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:14px;">
+          <div style="background:#F7F8FA;border:1px solid #EEF0F2;border-radius:11px;padding:9px 8px;text-align:center;"><div style="font-size:19px;font-weight:800;font-variant-numeric:tabular-nums;">10</div><div style="font-size:10px;color:#8A93A0;font-weight:600;margin-top:1px;">전체</div></div>
+          <div style="background:#F7F8FA;border:1px solid #EEF0F2;border-radius:11px;padding:9px 8px;text-align:center;"><div style="font-size:19px;font-weight:800;font-variant-numeric:tabular-nums;color:#0E9F6E;">0</div><div style="font-size:10px;color:#8A93A0;font-weight:600;margin-top:1px;">팔로업</div></div>
+          <div style="background:#F7F8FA;border:1px solid #EEF0F2;border-radius:11px;padding:9px 8px;text-align:center;"><div style="font-size:19px;font-weight:800;font-variant-numeric:tabular-nums;">2</div><div style="font-size:10px;color:#8A93A0;font-weight:600;margin-top:1px;">계약</div></div>
+          <div style="background:#F7F8FA;border:1px solid #EEF0F2;border-radius:11px;padding:9px 8px;text-align:center;"><div style="font-size:19px;font-weight:800;font-variant-numeric:tabular-nums;">2</div><div style="font-size:10px;color:#8A93A0;font-weight:600;margin-top:1px;">출고</div></div>
+        </div>
+        <!-- search -->
+        <div style="display:flex;align-items:center;gap:8px;margin-top:11px;background:#F3F4F6;border-radius:10px;padding:10px 13px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9AA0AB" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <span style="font-size:13px;color:#9AA0AB;">이름, 차종, 연락처 검색</span>
+        </div>
+      </div>
+
+      <!-- filter chips -->
+      <div class="noscroll" style="flex-shrink:0;background:#fff;padding:11px 18px;border-bottom:1px solid #EEF0F2;display:flex;gap:7px;overflow-x:auto;">
+        <span style="flex-shrink:0;padding:6px 13px;background:#1E2128;color:#fff;font-size:12px;font-weight:700;border-radius:18px;">전체 10</span>
+        <span style="flex-shrink:0;padding:6px 13px;background:#F3F4F6;color:#4B5563;font-size:12px;font-weight:600;border-radius:18px;">신규 4</span>
+        <span style="flex-shrink:0;padding:6px 13px;background:#F3F4F6;color:#4B5563;font-size:12px;font-weight:600;border-radius:18px;">계약 2</span>
+        <span style="flex-shrink:0;padding:6px 13px;background:#F3F4F6;color:#4B5563;font-size:12px;font-weight:600;border-radius:18px;">출고완료 2</span>
+        <span style="flex-shrink:0;padding:6px 13px;background:#F3F4F6;color:#4B5563;font-size:12px;font-weight:600;border-radius:18px;">장기관리</span>
+      </div>
+
+      <!-- list -->
+      <div class="noscroll" style="flex:1;overflow-y:auto;padding:12px 14px 16px;">
+        <sc-for list="{{ customers }}" as="c" hint-placeholder-count="5">
+          <div style="background:#fff;border:1px solid #EAECEF;border-radius:14px;padding:14px 16px;margin-bottom:10px;">
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div style="width:38px;height:38px;border-radius:10px;background:#F3F4F6;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#4B5563;flex-shrink:0;">{{ c.initial }}</div>
+              <div style="flex:1;min-width:0;">
+                <div style="display:flex;align-items:center;gap:7px;"><span style="font-size:15px;font-weight:700;">{{ c.name }}</span><span style="{{ c.badgeStyle }}">{{ c.status }}</span></div>
+                <div style="font-size:12px;color:#9AA0AB;margin-top:2px;font-variant-numeric:tabular-nums;">{{ c.phone }}</div>
+              </div>
+              <div style="{{ c.daysStyle }}">{{ c.days }}</div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-top:11px;">
+              <div style="min-width:0;"><div style="font-size:13px;font-weight:600;">{{ c.car }}</div><div style="font-size:11.5px;color:#9AA0AB;margin-top:2px;">{{ c.meta }}</div></div>
+              <div style="width:96px;flex-shrink:0;">
+                <div style="display:flex;align-items:center;justify-content:space-between;font-size:10.5px;margin-bottom:4px;"><span style="color:#9AA0AB;font-weight:600;">의지</span><span style="font-weight:700;font-variant-numeric:tabular-nums;color:{{ c.willColor }};">{{ c.will }}</span></div>
+                <div style="height:5px;background:#F0F1F3;border-radius:4px;overflow:hidden;"><div style="width:{{ c.will }};height:100%;background:{{ c.willColor }};border-radius:4px;"></div></div>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+
+      <!-- bottom tab bar -->
+      <div style="flex-shrink:0;background:#fff;border-top:1px solid #EAECEF;padding:9px 8px 22px;display:grid;grid-template-columns:repeat(5,1fr);">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:3px;color:#E4002B;">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>
+          <span style="font-size:10px;font-weight:700;">고객</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:3px;color:#9AA0AB;">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span style="font-size:10px;font-weight:600;">메시지</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:3px;color:#9AA0AB;">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          <span style="font-size:10px;font-weight:600;">라이브러리</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:3px;color:#9AA0AB;">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15h6M9 11h4"/></svg>
+          <span style="font-size:10px;font-weight:600;">견적목록</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:3px;color:#9AA0AB;">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span style="font-size:10px;font-weight:600;">설정</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:440,&quot;height&quot;:880}}">
+class Component extends DCLogic {
+  data = [
+    { name:'오지우', status:'신규', phone:'010-0000-0000 · 서울', car:'SEALION 7 Plus', meta:'Aurora White · 내방 · 저장 05.18', will:'30%', days:'51일 전', overdue:false },
+    { name:'김서연', status:'신규', phone:'010-0000-0000 · 서울', car:'DOLPHIN', meta:'Ski White / Black · 전화 · 저장 05.17', will:'30%', days:'50일 전', overdue:false },
+    { name:'이시우', status:'계약', phone:'010-0000-0000 · 경기 광주시', car:'SEALION 7 Plus', meta:'Shark Grey · 블로그 · 저장 04.06', will:'100%', days:'팔로업 지남', overdue:true },
+    { name:'유준호', status:'계약', phone:'010-0000-0000 · 인천', car:'SEALION 7 Plus', meta:'Aurora White · 다나와 · 저장 04.23', will:'50%', days:'46일 전', overdue:false },
+    { name:'최도현', status:'장기관리', phone:'010-0000-0000 · 서울', car:'SEALION 7', meta:'To do · 저장 05.21', will:'30%', days:'48일 전', overdue:false },
+    { name:'한예린', status:'출고완료', phone:'010-0000-0000 · 서울', car:'SEALION 7 Plus', meta:'내방 · 저장 05.24', will:'50%', days:'출고 28일 후', overdue:false },
+  ];
+  renderVals(){
+    const badge = (s) => {
+      const map = {
+        '신규':'color:#2563EB;background:#EAF0FE;',
+        '계약':'color:#fff;background:#1E2128;',
+        '출고완료':'color:#0E9F6E;background:#E7F7F0;',
+        '장기관리':'color:#B45309;background:#FEF3E2;',
+        '해약':'color:#9AA0AB;background:#F0F1F3;',
+      };
+      return 'font-size:10px;font-weight:700;padding:1px 7px;border-radius:5px;' + (map[s]||map['신규']);
+    };
+    const customers = this.data.map(c => ({
+      initial: c.name.charAt(0),
+      name: c.name, status: c.status, badgeStyle: badge(c.status),
+      phone: c.phone, car: c.car, meta: c.meta, will: c.will,
+      willColor: c.will==='100%' ? '#0E9F6E' : '#C8CDD5',
+      days: c.days,
+      daysStyle: 'font-size:11px;font-weight:600;flex-shrink:0;white-space:nowrap;color:' + (c.overdue ? '#E4002B' : '#9AA0AB') + ';',
+    }));
+    return { customers };
+  }
+}
+</script>
+</body>
+</html>

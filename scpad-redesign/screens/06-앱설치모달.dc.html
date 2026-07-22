@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;font-family:'Pretendard',-apple-system,sans-serif;}
+  </style>
+</helmet>
+
+<div style="min-height:100vh;width:100%;background:rgba(20,22,26,.55);display:flex;align-items:center;justify-content:center;padding:24px;">
+  <div style="width:412px;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 24px 60px rgba(16,24,40,.28);">
+
+    <!-- header -->
+    <div style="display:flex;align-items:flex-start;gap:12px;padding:22px 22px 18px;border-bottom:1px solid #F0F1F3;">
+      <div style="width:40px;height:40px;border-radius:11px;background:#1E2128;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+      </div>
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:16.5px;font-weight:800;letter-spacing:-.01em;color:#1A1C20;">모바일 CRM</div>
+        <div style="font-size:12.5px;color:#8A93A0;margin-top:2px;">SCPAD 고객관리 모바일 앱</div>
+      </div>
+      <button style="width:32px;height:32px;border:none;background:#F3F4F6;border-radius:9px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;" style-hover="background:#E9EBEF;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div style="padding:20px 22px;">
+
+      <!-- 접속 주소 -->
+      <div style="font-size:11px;font-weight:700;color:#9AA0AB;letter-spacing:.06em;">접속 주소</div>
+      <div style="display:flex;gap:8px;margin-top:9px;">
+        <div style="flex:1;min-width:0;display:flex;align-items:center;padding:0 14px;background:#F7F8FA;border:1px solid #E4E7EC;border-radius:10px;font-size:14px;font-weight:600;color:#1A1C20;font-variant-numeric:tabular-nums;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">scpad.vercel.app/bydcrm</div>
+        <button style="flex-shrink:0;display:flex;align-items:center;gap:6px;padding:11px 15px;border:none;background:#E4002B;color:#fff;font-size:13px;font-weight:700;border-radius:10px;cursor:pointer;" style-hover="background:#C10024;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          복사
+        </button>
+      </div>
+
+      <!-- QR -->
+      <div style="display:flex;align-items:center;gap:18px;margin-top:18px;padding:16px;background:#FAFBFC;border:1px solid #EEF0F2;border-radius:14px;">
+        <div style="width:112px;height:112px;background:#fff;border:1px solid #EAECEF;border-radius:12px;padding:9px;flex-shrink:0;">
+          <svg width="100%" height="100%" viewBox="0 0 29 29" shape-rendering="crispEdges" fill="#1A1C20">
+            <path d="M0 0h7v7h-7z M1 1h5v5h-5z M2 2h3v3h-3z" fill-rule="evenodd"/>
+            <path d="M22 0h7v7h-7z M23 1h5v5h-5z M24 2h3v3h-3z" fill-rule="evenodd"/>
+            <path d="M0 22h7v7h-7z M1 23h5v5h-5z M2 24h3v3h-3z" fill-rule="evenodd"/>
+            <rect x="9" y="1" width="1" height="1"/><rect x="11" y="1" width="1" height="1"/><rect x="13" y="1" width="1" height="1"/><rect x="16" y="1" width="1" height="1"/><rect x="19" y="1" width="1" height="1"/>
+            <rect x="10" y="3" width="1" height="1"/><rect x="12" y="3" width="1" height="1"/><rect x="15" y="3" width="1" height="1"/><rect x="18" y="3" width="1" height="1"/><rect x="20" y="3" width="1" height="1"/>
+            <rect x="9" y="5" width="1" height="1"/><rect x="13" y="5" width="1" height="1"/><rect x="17" y="5" width="1" height="1"/><rect x="19" y="5" width="1" height="1"/>
+            <rect x="1" y="9" width="1" height="1"/><rect x="3" y="9" width="1" height="1"/><rect x="5" y="9" width="1" height="1"/><rect x="8" y="9" width="1" height="1"/><rect x="11" y="9" width="1" height="1"/><rect x="14" y="9" width="1" height="1"/><rect x="16" y="9" width="1" height="1"/><rect x="20" y="9" width="1" height="1"/><rect x="23" y="9" width="1" height="1"/><rect x="26" y="9" width="1" height="1"/><rect x="28" y="9" width="1" height="1"/>
+            <rect x="2" y="11" width="1" height="1"/><rect x="4" y="11" width="1" height="1"/><rect x="7" y="11" width="1" height="1"/><rect x="10" y="11" width="1" height="1"/><rect x="13" y="11" width="1" height="1"/><rect x="15" y="11" width="1" height="1"/><rect x="18" y="11" width="1" height="1"/><rect x="22" y="11" width="1" height="1"/><rect x="25" y="11" width="1" height="1"/><rect x="27" y="11" width="1" height="1"/>
+            <rect x="1" y="13" width="1" height="1"/><rect x="5" y="13" width="1" height="1"/><rect x="9" y="13" width="1" height="1"/><rect x="12" y="13" width="1" height="1"/><rect x="16" y="13" width="1" height="1"/><rect x="19" y="13" width="1" height="1"/><rect x="24" y="13" width="1" height="1"/><rect x="28" y="13" width="1" height="1"/>
+            <rect x="3" y="15" width="1" height="1"/><rect x="6" y="15" width="1" height="1"/><rect x="11" y="15" width="1" height="1"/><rect x="14" y="15" width="1" height="1"/><rect x="17" y="15" width="1" height="1"/><rect x="21" y="15" width="1" height="1"/><rect x="23" y="15" width="1" height="1"/><rect x="26" y="15" width="1" height="1"/>
+            <rect x="2" y="17" width="1" height="1"/><rect x="8" y="17" width="1" height="1"/><rect x="10" y="17" width="1" height="1"/><rect x="13" y="17" width="1" height="1"/><rect x="18" y="17" width="1" height="1"/><rect x="20" y="17" width="1" height="1"/><rect x="25" y="17" width="1" height="1"/><rect x="27" y="17" width="1" height="1"/>
+            <rect x="4" y="19" width="1" height="1"/><rect x="7" y="19" width="1" height="1"/><rect x="9" y="19" width="1" height="1"/><rect x="15" y="19" width="1" height="1"/><rect x="19" y="19" width="1" height="1"/><rect x="22" y="19" width="1" height="1"/><rect x="24" y="19" width="1" height="1"/><rect x="28" y="19" width="1" height="1"/>
+            <rect x="10" y="21" width="1" height="1"/><rect x="12" y="21" width="1" height="1"/><rect x="14" y="21" width="1" height="1"/><rect x="17" y="21" width="1" height="1"/><rect x="21" y="21" width="1" height="1"/><rect x="26" y="21" width="1" height="1"/>
+            <rect x="9" y="23" width="1" height="1"/><rect x="13" y="23" width="1" height="1"/><rect x="16" y="23" width="1" height="1"/><rect x="20" y="23" width="1" height="1"/><rect x="23" y="23" width="1" height="1"/><rect x="25" y="23" width="1" height="1"/><rect x="28" y="23" width="1" height="1"/>
+            <rect x="11" y="25" width="1" height="1"/><rect x="15" y="25" width="1" height="1"/><rect x="18" y="25" width="1" height="1"/><rect x="22" y="25" width="1" height="1"/><rect x="24" y="25" width="1" height="1"/><rect x="27" y="25" width="1" height="1"/>
+            <rect x="10" y="27" width="1" height="1"/><rect x="13" y="27" width="1" height="1"/><rect x="17" y="27" width="1" height="1"/><rect x="21" y="27" width="1" height="1"/><rect x="26" y="27" width="1" height="1"/><rect x="28" y="27" width="1" height="1"/>
+          </svg>
+        </div>
+        <div style="font-size:13px;color:#6B7280;line-height:1.7;">스마트폰 카메라로<br>QR 코드를 스캔하면<br><b style="color:#1A1C20;font-weight:700;">바로 접속</b>됩니다</div>
+      </div>
+
+      <!-- 설치 방법 -->
+      <div style="font-size:11px;font-weight:700;color:#9AA0AB;letter-spacing:.06em;margin-top:20px;">설치 방법</div>
+
+      <div style="margin-top:10px;border:1px solid #E4E7EC;border-radius:13px;overflow:hidden;">
+        <div style="display:flex;align-items:center;gap:8px;padding:11px 15px;background:#FAFBFC;border-bottom:1px solid #EEF0F2;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#1A1C20"><path d="M16 1c-1.6.1-3.5 1.1-4.6 2.4-1 1.1-1.8 2.9-1.5 4.5 1.7.1 3.5-.9 4.5-2.2 1-1.2 1.7-2.9 1.6-4.7zM20.6 17c-.6 1.4-.9 2-1.7 3.2-1.1 1.7-2.6 3.8-4.5 3.8-1.7 0-2.1-1.1-4.4-1.1s-2.8 1.1-4.4 1.1c-1.9 0-3.3-1.9-4.4-3.6C-.6 15.5-1 9.2 2 6.2 3.4 4.8 5.1 4 6.9 4c1.9 0 3.1 1.1 4.6 1.1 1.5 0 2.4-1.1 4.6-1.1 1.6 0 3.3.9 4.5 2.4-4 2.2-3.3 7.9.9 9.6z"/></svg>
+          <span style="font-size:13px;font-weight:700;color:#1A1C20;">iPhone / iPad</span>
+          <span style="font-size:11.5px;color:#9AA0AB;font-weight:500;">Safari</span>
+        </div>
+        <div style="padding:12px 15px;display:flex;flex-direction:column;gap:11px;">
+          <div style="display:flex;align-items:center;gap:11px;"><span style="width:20px;height:20px;border-radius:50%;background:#1E2128;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</span><span style="font-size:13px;color:#3E4757;">Safari에서 위 주소로 접속</span></div>
+          <div style="display:flex;align-items:center;gap:11px;"><span style="width:20px;height:20px;border-radius:50%;background:#1E2128;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</span><span style="font-size:13px;color:#3E4757;">하단 <b style="font-weight:700;color:#1A1C20;">공유 버튼</b> 탭</span></div>
+          <div style="display:flex;align-items:center;gap:11px;"><span style="width:20px;height:20px;border-radius:50%;background:#1E2128;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</span><span style="font-size:13px;color:#3E4757;"><b style="font-weight:700;color:#1A1C20;">홈 화면에 추가</b> 선택</span></div>
+        </div>
+      </div>
+
+      <div style="margin-top:10px;border:1px solid #E4E7EC;border-radius:13px;overflow:hidden;">
+        <div style="display:flex;align-items:center;gap:8px;padding:11px 15px;background:#FAFBFC;border-bottom:1px solid #EEF0F2;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#1A1C20"><path d="M17.6 9.5 20 5.4a.5.5 0 0 0-.9-.5l-2.4 4.2a13.8 13.8 0 0 0-9.4 0L4.9 4.9a.5.5 0 1 0-.9.5l2.4 4.1A11.5 11.5 0 0 0 .5 19h23a11.5 11.5 0 0 0-5.9-9.5zM7 15.2a1.1 1.1 0 1 1 0-2.3 1.1 1.1 0 0 1 0 2.3zm10 0a1.1 1.1 0 1 1 0-2.3 1.1 1.1 0 0 1 0 2.3z"/></svg>
+          <span style="font-size:13px;font-weight:700;color:#1A1C20;">Android</span>
+          <span style="font-size:11.5px;color:#9AA0AB;font-weight:500;">Chrome</span>
+        </div>
+        <div style="padding:12px 15px;display:flex;flex-direction:column;gap:11px;">
+          <div style="display:flex;align-items:center;gap:11px;"><span style="width:20px;height:20px;border-radius:50%;background:#1E2128;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</span><span style="font-size:13px;color:#3E4757;">Chrome에서 위 주소로 접속</span></div>
+          <div style="display:flex;align-items:center;gap:11px;"><span style="width:20px;height:20px;border-radius:50%;background:#1E2128;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</span><span style="font-size:13px;color:#3E4757;">우상단 메뉴 → <b style="font-weight:700;color:#1A1C20;">앱 설치</b></span></div>
+          <div style="display:flex;align-items:center;gap:11px;"><span style="width:20px;height:20px;border-radius:50%;background:#1E2128;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</span><span style="font-size:13px;color:#3E4757;">홈 화면에서 <b style="font-weight:700;color:#1A1C20;">SCPAD 실행</b></span></div>
+        </div>
+      </div>
+
+      <button style="width:100%;margin-top:18px;padding:14px;border:none;background:#1E2128;color:#fff;font-size:14px;font-weight:700;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;" style-hover="background:#2A2E37;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/></svg>
+        앱 사용 가이드 보기
+      </button>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:460,&quot;height&quot;:720}}"></script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;font-family:'Pretendard',-apple-system,sans-serif;background:#F3F4F6;color:#1A1C20;}
+    a{color:#E4002B;text-decoration:none;}
+    a:hover{color:#C10024;}
+    input,select,textarea,button{font-family:inherit;}
+    input::placeholder,textarea::placeholder{color:#AAB1BD;}
+    ::-webkit-scrollbar{width:10px;height:10px;}
+    ::-webkit-scrollbar-thumb{background:#d2d6dd;border-radius:8px;border:3px solid #F3F4F6;}
+    ::-webkit-scrollbar-thumb:hover{background:#bcc2cc;}
+  </style>
+</helmet>
+
+<div style="display:flex;height:100vh;width:100%;overflow:hidden;">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside style="width:248px;flex-shrink:0;height:100vh;background:#1E2128;display:flex;flex-direction:column;">
+    <div style="padding:22px 22px 18px;">
+      <div style="font-size:17px;font-weight:800;color:#fff;letter-spacing:.02em;">BYD <span style="color:#E4002B;">SCPAD</span></div>
+      <div style="font-size:10.5px;color:#6C7381;margin-top:3px;letter-spacing:.04em;font-weight:500;">Sales Console</div>
+    </div>
+    <nav style="flex:1;overflow-y:auto;padding:4px 12px;">
+      <a href="02-대시보드.dc.html" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:9px;color:#AAB1BD;font-size:13.5px;font-weight:500;margin-bottom:2px;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.4"/><rect x="14" y="3" width="7" height="5" rx="1.4"/><rect x="14" y="12" width="7" height="9" rx="1.4"/><rect x="3" y="16" width="7" height="5" rx="1.4"/></svg>
+        대시보드
+      </a>
+      <div style="font-size:10px;font-weight:700;color:#565C68;letter-spacing:.1em;padding:16px 12px 7px;">고객</div>
+      <a href="03-고객관리.dc.html" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:9px;color:#AAB1BD;font-size:13.5px;font-weight:500;margin-bottom:2px;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>
+        <span style="flex:1;">고객관리</span>
+        <span style="font-size:11px;font-weight:700;color:#C9CED7;background:#31353E;padding:1px 8px;border-radius:20px;">10</span>
+      </a>
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:9px;color:#AAB1BD;font-size:13.5px;font-weight:500;margin-bottom:2px;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
+        <span style="flex:1;">팔로업</span>
+      </a>
+      <div style="font-size:10px;font-weight:700;color:#565C68;letter-spacing:.1em;padding:16px 12px 7px;">견적</div>
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:9px;background:rgba(228,0,43,.14);box-shadow:inset 2.5px 0 0 #E4002B;color:#fff;font-size:13.5px;font-weight:700;margin-bottom:2px;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF5A76" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        견적기
+      </a>
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:9px;color:#AAB1BD;font-size:13.5px;font-weight:500;margin-bottom:2px;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        <span style="flex:1;">저장 견적</span>
+        <span style="font-size:11px;font-weight:700;color:#C9CED7;background:#31353E;padding:1px 8px;border-radius:20px;">43</span>
+      </a>
+    </nav>
+    <div style="padding:8px 12px 6px;border-top:1px solid #2B2F38;">
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:9px;color:#868D99;font-size:12.5px;font-weight:500;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        관리자 쪽지
+      </a>
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:9px;color:#868D99;font-size:12.5px;font-weight:500;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+        문의하기
+      </a>
+    </div>
+    <div style="padding:12px;border-top:1px solid #2B2F38;">
+      <div style="display:flex;align-items:center;gap:11px;padding:8px;border-radius:11px;">
+        <div style="width:36px;height:36px;border-radius:10px;background:#31353E;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#E7EAEF;flex-shrink:0;">남</div>
+        <div style="min-width:0;flex:1;">
+          <div style="display:flex;align-items:center;gap:6px;"><span style="font-size:13px;font-weight:700;color:#fff;">남광희</span><span style="font-size:9px;font-weight:800;color:#1E2128;background:#C8CDD5;padding:1px 5px;border-radius:4px;">MAX</span></div>
+          <div style="font-size:10.5px;color:#6C7381;margin-top:1px;">BYD 서초 전시장</div>
+        </div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6C7381" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <div style="flex:1;display:flex;flex-direction:column;min-width:0;height:100vh;">
+
+    <header style="flex-shrink:0;height:64px;background:#fff;border-bottom:1px solid #EAECEF;display:flex;align-items:center;padding:0 28px;gap:14px;">
+      <div>
+        <div style="font-size:11px;color:#9AA0AB;font-weight:500;">견적</div>
+        <div style="font-size:18px;font-weight:800;letter-spacing:-.02em;margin-top:-1px;">견적기</div>
+      </div>
+      <div style="flex:1;"></div>
+      <button onClick="{{ onReset }}" style="display:flex;align-items:center;gap:6px;height:40px;padding:0 15px;border:1px solid #EAECEF;background:#fff;color:#4B5563;font-size:13px;font-weight:600;border-radius:10px;cursor:pointer;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+        초기화
+      </button>
+      <button onClick="{{ onCreate }}" style="display:flex;align-items:center;gap:7px;height:40px;padding:0 17px;border:none;background:#E4002B;color:#fff;font-size:13px;font-weight:700;border-radius:10px;cursor:pointer;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15h6M9 11h2"/></svg>
+        견적서 생성
+      </button>
+    </header>
+
+    <div style="flex:1;overflow-y:auto;">
+      <div style="max-width:1180px;margin:0 auto;padding:16px 28px 44px;display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:16px;align-items:start;">
+
+        <!-- ===== FORM ===== -->
+        <div style="display:flex;flex-direction:column;gap:11px;min-width:0;">
+
+          <!-- 고객 정보 -->
+          <section style="background:#fff;border:1px solid #EAECEF;border-radius:14px;padding:13px 20px;">
+            <div style="font-size:14.5px;font-weight:700;margin-bottom:11px;">고객 정보</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:13px 20px;">
+              <div><label style="display:block;font-size:12px;font-weight:600;color:#6B7280;margin-bottom:5px;">고객명</label><input value="{{ customerName }}" onInput="{{ onCustomerName }}" placeholder="고객명 입력" style="width:100%;padding:9px 13px;border:1px solid #E4E7EC;border-radius:9px;background:#F8F9FA;font-size:14px;outline:none;" style-focus="border-color:#E4002B;background:#fff;"/></div>
+              <div><label style="display:block;font-size:12px;font-weight:600;color:#6B7280;margin-bottom:5px;">전시장</label><input value="{{ dealership }}" onInput="{{ onDealership }}" style="width:100%;padding:9px 13px;border:1px solid #E4E7EC;border-radius:9px;background:#F8F9FA;font-size:14px;outline:none;" style-focus="border-color:#E4002B;background:#fff;"/></div>
+              <div><label style="display:block;font-size:12px;font-weight:600;color:#6B7280;margin-bottom:5px;">담당자</label><input value="{{ manager }}" onInput="{{ onManager }}" style="width:100%;padding:9px 13px;border:1px solid #E4E7EC;border-radius:9px;background:#F8F9FA;font-size:14px;outline:none;" style-focus="border-color:#E4002B;background:#fff;"/></div>
+              <div><label style="display:block;font-size:12px;font-weight:600;color:#6B7280;margin-bottom:5px;">담당자 연락처</label><input value="{{ managerPhone }}" onInput="{{ onManagerPhone }}" style="width:100%;padding:9px 13px;border:1px solid #E4E7EC;border-radius:9px;background:#F8F9FA;font-size:14px;outline:none;font-variant-numeric:tabular-nums;" style-focus="border-color:#E4002B;background:#fff;"/></div>
+            </div>
+          </section>
+
+          <!-- 차량 선택 -->
+          <section style="background:#fff;border:1px solid #EAECEF;border-radius:14px;padding:13px 20px;">
+            <div style="font-size:14.5px;font-weight:700;margin-bottom:11px;">차량 선택</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:13px 20px;">
+              <div><label style="display:block;font-size:12px;font-weight:600;color:#6B7280;margin-bottom:5px;">시리즈</label>
+                <select value="{{ series }}" onChange="{{ onSeries }}" style="width:100%;padding:9px 36px 9px 13px;border:1px solid #E4E7EC;border-radius:9px;background-color:#F8F9FA;background-image:url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round'><path d='M6 9l6 6 6-6'/></svg>&quot;);background-repeat:no-repeat;background-position:right 11px center;font-size:14px;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;" style-focus="border-color:#E4002B;">
+                  <sc-for list="{{ seriesList }}" as="s" hint-placeholder-count="4"><option value="{{ s }}">{{ s }}</option></sc-for>
+                </select>
+              </div>
+              <div><label style="display:block;font-size:12px;font-weight:600;color:#6B7280;margin-bottom:5px;">모델명</label>
+                <select value="{{ model }}" onChange="{{ onModel }}" style="width:100%;padding:9px 36px 9px 13px;border:1px solid #E4E7EC;border-radius:9px;background-color:#F8F9FA;background-image:url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round'><path d='M6 9l6 6 6-6'/></svg>&quot;);background-repeat:no-repeat;background-position:right 11px center;font-size:14px;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;" style-focus="border-color:#E4002B;">
+                  <sc-for list="{{ modelList }}" as="m" hint-placeholder-count="2"><option value="{{ m }}">{{ m }}</option></sc-for>
+                </select>
+              </div>
+              <div><label style="display:block;font-size:12px;font-weight:600;color:#6B7280;margin-bottom:5px;">외장 색상</label>
+                <select value="{{ extColor }}" onChange="{{ onExtColor }}" style="width:100%;padding:9px 36px 9px 13px;border:1px solid #E4E7EC;border-radius:9px;background-color:#F8F9FA;background-image:url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round'><path d='M6 9l6 6 6-6'/></svg>&quot;);background-repeat:no-repeat;background-position:right 11px center;font-size:14px;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;" style-focus="border-color:#E4002B;">
+                  <sc-for list="{{ extColorList }}" as="c" hint-placeholder-count="5"><option value="{{ c }}">{{ c }}</option></sc-for>
+                </select>
+              </div>
+              <div><label style="display:block;font-size:12px;font-weight:600;color:#6B7280;margin-bottom:5px;">내장 색상</label>
+                <select value="{{ intColor }}" onChange="{{ onIntColor }}" style="width:100%;padding:9px 36px 9px 13px;border:1px solid #E4E7EC;border-radius:9px;background-color:#F8F9FA;background-image:url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round'><path d='M6 9l6 6 6-6'/></svg>&quot;);background-repeat:no-repeat;background-position:right 11px center;font-size:14px;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;" style-focus="border-color:#E4002B;">
+                  <sc-for list="{{ intColorList }}" as="c" hint-placeholder-count="2"><option value="{{ c }}">{{ c }}</option></sc-for>
+                </select>
+              </div>
+            </div>
+            <div style="margin-top:12px;display:flex;align-items:center;padding:12px 18px;border-radius:11px;background:#FAFBFC;border:1px solid #EEF0F2;">
+              <div style="display:flex;align-items:baseline;gap:8px;padding-right:20px;"><span style="font-size:12px;color:#6B7280;font-weight:600;">차량가격</span><span style="font-size:16px;font-weight:800;font-variant-numeric:tabular-nums;">{{ carPriceText }}</span></div>
+              <div style="width:1px;height:20px;background:#E4E7EC;"></div>
+              <div style="display:flex;align-items:baseline;gap:8px;padding:0 20px;"><span style="font-size:12px;color:#6B7280;font-weight:600;">배터리</span><span style="font-size:14px;font-weight:700;">{{ batteryText }}</span></div>
+              <div style="width:1px;height:20px;background:#E4E7EC;"></div>
+              <div style="display:flex;align-items:baseline;gap:8px;padding-left:20px;"><span style="font-size:12px;color:#6B7280;font-weight:600;">주행거리</span><span style="font-size:14px;font-weight:700;">{{ rangeText }}</span></div>
+            </div>
+          </section>
+
+          <!-- 가격 정보 -->
+          <section style="background:#fff;border:1px solid #EAECEF;border-radius:14px;padding:13px 20px;">
+            <div style="font-size:14.5px;font-weight:700;margin-bottom:10px;">가격 정보</div>
+            <div style="border:1px solid #EEF0F2;border-radius:12px;padding:4px 16px 8px;background:#FCFCFD;margin-bottom:14px;">
+              <div style="font-size:12px;font-weight:700;color:#4B5563;padding:10px 0 2px;">부대비용</div>
+              <sc-for list="{{ feeRows }}" as="row" hint-placeholder-count="3">
+                <div style="display:flex;align-items:center;gap:11px;padding:11px 0;border-top:1px solid #F1F2F4;">
+                  <span style="font-size:13px;font-weight:600;color:#344054;min-width:76px;">{{ row.label }}</span>
+                  <button onClick="{{ row.toggleManual }}" style="{{ row.manualChipStyle }}">수기</button>
+                  <sc-if value="{{ row.isAcq }}" hint-placeholder-val="{{ true }}"><button onClick="{{ row.toggleExempt }}" style="{{ row.exemptChipStyle }}">면세</button></sc-if>
+                  <div style="flex:1;text-align:right;font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;">{{ row.amountText }}</div>
+                  <div style="display:inline-flex;gap:3px;padding:3px;background:#F0F1F3;border-radius:8px;"><button onClick="{{ row.setBydo }}" style="{{ row.bydoStyle }}">별도</button><button onClick="{{ row.setDaechul }}" style="{{ row.daechulStyle }}">대출</button></div>
+                </div>
+              </sc-for>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:13px 20px;">
+              <div><label style="display:block;font-size:12px;font-weight:600;color:#6B7280;margin-bottom:5px;">할인 금액 (원)</label><input value="{{ discountText }}" onInput="{{ onDiscount }}" inputmode="numeric" style="width:100%;padding:9px 13px;border:1px solid #E4E7EC;border-radius:9px;background:#F8F9FA;font-size:14px;color:#E4002B;font-weight:600;outline:none;font-variant-numeric:tabular-nums;" style-focus="border-color:#E4002B;background:#fff;"/></div>
+              <div><label style="display:block;font-size:12px;font-weight:600;color:#6B7280;margin-bottom:5px;">공채 (원)</label><input value="{{ bondText }}" onInput="{{ onBond }}" inputmode="numeric" style="width:100%;padding:9px 13px;border:1px solid #E4E7EC;border-radius:9px;background:#F8F9FA;font-size:14px;outline:none;font-variant-numeric:tabular-nums;" style-focus="border-color:#E4002B;background:#fff;"/></div>
+            </div>
+          </section>
+
+          <!-- 전기차 보조금 -->
+          <section style="background:#fff;border:1px solid #EAECEF;border-radius:14px;padding:13px 20px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+              <div style="font-size:14.5px;font-weight:700;">전기차 보조금</div>
+              <button style="display:flex;align-items:center;gap:6px;padding:7px 13px;border:1px solid #E4E7EC;background:#fff;color:#4B5563;font-size:12.5px;font-weight:600;border-radius:9px;cursor:pointer;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>보조금 조회</button>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;">
+              <div>
+                <div style="font-size:12px;font-weight:700;color:#4B5563;margin-bottom:10px;">기본 보조금</div>
+                <div style="display:flex;flex-direction:column;gap:11px;">
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:11px;">
+                    <div><label style="display:block;font-size:11.5px;font-weight:600;color:#6B7280;margin-bottom:5px;">시 / 도</label>
+                      <select value="{{ sido }}" onChange="{{ onSido }}" style="width:100%;padding:9px 32px 9px 12px;border:1px solid #E4E7EC;border-radius:9px;background-color:#F8F9FA;background-image:url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round'><path d='M6 9l6 6 6-6'/></svg>&quot;);background-repeat:no-repeat;background-position:right 9px center;font-size:13px;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;" style-focus="border-color:#E4002B;">
+                        <sc-for list="{{ sidoList }}" as="sd" hint-placeholder-count="3"><option value="{{ sd }}">{{ sd }}</option></sc-for>
+                      </select>
+                    </div>
+                    <div><label style="display:block;font-size:11.5px;font-weight:600;color:#6B7280;margin-bottom:5px;">시 / 군</label>
+                      <select value="{{ sigun }}" onChange="{{ onSigun }}" style="width:100%;padding:9px 32px 9px 12px;border:1px solid #E4E7EC;border-radius:9px;background-color:#F8F9FA;background-image:url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round'><path d='M6 9l6 6 6-6'/></svg>&quot;);background-repeat:no-repeat;background-position:right 9px center;font-size:13px;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;" style-focus="border-color:#E4002B;">
+                        <sc-for list="{{ sigunList }}" as="sg" hint-placeholder-count="5"><option value="{{ sg }}">{{ sg }}</option></sc-for>
+                      </select>
+                    </div>
+                  </div>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:11px;">
+                    <div><label style="display:block;font-size:11.5px;font-weight:600;color:#6B7280;margin-bottom:5px;">국고 보조금</label><input value="{{ govText }}" onInput="{{ onGov }}" inputmode="numeric" style="width:100%;padding:9px 12px;border:1px solid #E4E7EC;border-radius:9px;background:#F8F9FA;font-size:13px;color:#0E9F6E;font-weight:600;outline:none;font-variant-numeric:tabular-nums;" style-focus="border-color:#E4002B;background:#fff;"/></div>
+                    <div><label style="display:block;font-size:11.5px;font-weight:600;color:#6B7280;margin-bottom:5px;">지자체 보조금</label><input value="{{ localText }}" onInput="{{ onLocal }}" inputmode="numeric" style="width:100%;padding:9px 12px;border:1px solid #E4E7EC;border-radius:9px;background:#F8F9FA;font-size:13px;color:#0E9F6E;font-weight:600;outline:none;font-variant-numeric:tabular-nums;" style-focus="border-color:#E4002B;background:#fff;"/></div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:6px;font-size:11.5px;color:#0E9F6E;font-weight:600;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>보조금 자동입력됨 · 수정 가능</div>
+                </div>
+              </div>
+              <div>
+                <div style="font-size:12px;font-weight:700;color:#4B5563;margin-bottom:10px;">추가 보조금</div>
+                <div style="display:flex;flex-direction:column;gap:9px;">
+                  <sc-for list="{{ addSubList }}" as="a" hint-placeholder-count="4">
+                    <div onClick="{{ a.onToggle }}" style="{{ a.cardStyle }}">
+                      <div style="{{ a.boxStyle }}"><sc-if value="{{ a.checked }}" hint-placeholder-val="{{ false }}"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></sc-if></div>
+                      <div style="flex:1;min-width:0;font-size:13px;font-weight:600;color:#344054;">{{ a.label }}</div>
+                      <div style="font-size:11.5px;font-weight:700;color:#9AA0AB;white-space:nowrap;">{{ a.amountLabel }}</div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:14px;padding:14px 18px;border-radius:12px;background:#F6FBF8;border:1px solid #D5EFDF;display:flex;align-items:center;justify-content:space-between;">
+              <div><div style="font-size:13px;font-weight:700;color:#0E9F6E;">총 보조금</div><div style="font-size:11.5px;color:#5FA582;margin-top:3px;">{{ subsidyBreakdown }}</div></div>
+              <div style="font-size:22px;font-weight:800;color:#0E9F6E;font-variant-numeric:tabular-nums;">{{ subsidyTotalText }}</div>
+            </div>
+          </section>
+
+          <!-- 할부 조건 -->
+          <section style="background:#fff;border:1px solid #EAECEF;border-radius:14px;padding:13px 20px;">
+            <div style="font-size:14.5px;font-weight:700;margin-bottom:10px;">할부 조건</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+              <div><label style="display:block;font-size:12px;font-weight:600;color:#6B7280;margin-bottom:5px;">금융상품</label>
+                <select value="{{ finance }}" onChange="{{ onFinance }}" style="width:100%;padding:9px 36px 9px 13px;border:1px solid #E4E7EC;border-radius:9px;background-color:#F8F9FA;background-image:url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round'><path d='M6 9l6 6 6-6'/></svg>&quot;);background-repeat:no-repeat;background-position:right 11px center;font-size:14px;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;" style-focus="border-color:#E4002B;">
+                  <sc-for list="{{ financeList }}" as="f" hint-placeholder-count="4"><option value="{{ f }}">{{ f }}</option></sc-for>
+                </select>
+              </div>
+              <div style="{{ companyWrapStyle }}"><label style="display:block;font-size:12px;font-weight:600;color:#6B7280;margin-bottom:5px;">금융사</label>
+                <select value="{{ financeCompany }}" onChange="{{ onFinanceCompany }}" style="width:100%;padding:9px 36px 9px 13px;border:1px solid #E4E7EC;border-radius:9px;background-color:#F8F9FA;background-image:url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round'><path d='M6 9l6 6 6-6'/></svg>&quot;);background-repeat:no-repeat;background-position:right 11px center;font-size:14px;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;" style-focus="border-color:#E4002B;">
+                  <sc-for list="{{ companyList }}" as="fc" hint-placeholder-count="4"><option value="{{ fc }}">{{ fc }}</option></sc-for>
+                </select>
+              </div>
+            </div>
+
+            <div style="{{ loanPanelStyle }}">
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:11px 16px;background:#FAFBFC;border-bottom:1px solid #EEF0F2;">
+                <div style="font-size:13px;font-weight:700;color:#1A1C20;">{{ financeCompany }} 대출 조건</div>
+                <div style="font-size:11.5px;color:#9AA0AB;">상한 금리 {{ rateText }}</div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:16px;">
+                <div style="display:flex;flex-direction:column;gap:12px;">
+                  <div><label style="display:block;font-size:11.5px;font-weight:600;color:#6B7280;margin-bottom:5px;">대출 개월수</label>
+                    <select value="{{ loanMonths }}" onChange="{{ onLoanMonths }}" style="width:100%;padding:9px 32px 9px 12px;border:1px solid #E4E7EC;border-radius:9px;background-color:#fff;background-image:url(&quot;data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round'><path d='M6 9l6 6 6-6'/></svg>&quot;);background-repeat:no-repeat;background-position:right 9px center;font-size:13px;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer;" style-focus="border-color:#E4002B;">
+                      <sc-for list="{{ monthsList }}" as="mo" hint-placeholder-count="5"><option value="{{ mo }}">{{ mo }}</option></sc-for>
+                    </select>
+                  </div>
+                  <div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px;"><label style="font-size:11.5px;font-weight:600;color:#6B7280;">선수금</label>
+                      <div style="display:inline-flex;gap:3px;padding:3px;background:#F0F1F3;border-radius:8px;"><button onClick="{{ onDownPct }}" style="{{ dtPctStyle }}">%</button><button onClick="{{ onDownWon }}" style="{{ dtWonStyle }}">원</button><button onClick="{{ onDownLoan }}" style="{{ dtLoanStyle }}">대출금</button></div>
+                    </div>
+                    <input value="{{ downText }}" onInput="{{ onDownValue }}" inputmode="numeric" style="width:100%;padding:9px 12px;border:1px solid #E4E7EC;border-radius:9px;background:#fff;font-size:13px;outline:none;font-variant-numeric:tabular-nums;" style-focus="border-color:#E4002B;"/>
+                  </div>
+                </div>
+                <div style="background:#FAFBFC;border:1px solid #EEF0F2;border-radius:11px;padding:4px 16px;">
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid #F1F2F4;"><span style="font-size:12px;color:#6B7280;">대출금액</span><span style="font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;">{{ loanAmountText }}</span></div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid #F1F2F4;"><span style="font-size:12px;color:#6B7280;">수수료 금액</span><span style="font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;">{{ loanFeeText }}</span></div>
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;"><span style="font-size:12px;color:#6B7280;">월 납입금</span><span style="font-size:16px;font-weight:800;color:#E4002B;font-variant-numeric:tabular-nums;">{{ loanMonthlyText }}</span></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 메모 -->
+          <section style="background:#fff;border:1px solid #EAECEF;border-radius:14px;padding:13px 20px;">
+            <div style="font-size:14.5px;font-weight:700;margin-bottom:10px;">메모 / 특이사항</div>
+            <textarea value="{{ memo }}" onInput="{{ onMemo }}" placeholder="고객 특이사항, 구두 약속, 특별 조건 등 메모를 입력하세요..." style="width:100%;min-height:78px;padding:11px 14px;border:1px solid #E4E7EC;border-radius:11px;background:#F8F9FA;font-size:14px;outline:none;resize:vertical;line-height:1.6;" style-focus="border-color:#E4002B;background:#fff;"></textarea>
+          </section>
+        </div>
+
+        <!-- ===== SUMMARY RAIL ===== -->
+        <div style="position:sticky;top:0;">
+          <div style="background:#1E2128;border-radius:16px;overflow:hidden;">
+            <div style="padding:20px 22px 16px;border-bottom:1px solid #2B2F38;">
+              <div style="display:flex;align-items:center;justify-content:space-between;"><div style="font-size:12px;font-weight:700;color:#8A93A0;letter-spacing:.04em;">예상 견적 요약</div><div style="font-size:10px;font-weight:800;color:#1E2128;background:#FF5A76;padding:2px 8px;border-radius:5px;letter-spacing:.03em;">LIVE</div></div>
+              <div style="margin-top:12px;"><div style="font-size:15px;font-weight:700;color:#fff;">{{ vehicleLabel }}</div><div style="font-size:11.5px;color:#6C7381;margin-top:2px;">{{ colorLabel }}</div></div>
+            </div>
+            <div style="padding:16px 22px;">
+              <sc-for list="{{ summaryLines }}" as="line" hint-placeholder-count="5">
+                <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;"><span style="font-size:12.5px;color:#8A93A0;">{{ line.label }}</span><span style="font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;color:{{ line.color }};">{{ line.value }}</span></div>
+              </sc-for>
+              <div style="height:1px;background:#2B2F38;margin:11px 0;"></div>
+              <div style="display:flex;align-items:flex-end;justify-content:space-between;"><span style="font-size:13px;color:#C9CED7;font-weight:600;padding-bottom:5px;">예상 최종 견적가</span><div style="text-align:right;"><span style="font-size:27px;font-weight:800;color:#fff;letter-spacing:-.02em;font-variant-numeric:tabular-nums;">{{ finalText }}</span><span style="font-size:14px;font-weight:700;color:#FF5A76;margin-left:2px;">원</span></div></div>
+              <div style="{{ railMonthlyStyle }}"><div style="display:flex;align-items:center;justify-content:space-between;"><span style="font-size:12px;color:#8A93A0;font-weight:600;">{{ monthlyCaption }}</span><span style="font-size:16px;font-weight:800;color:#FF5A76;font-variant-numeric:tabular-nums;">{{ monthlyText }}</span></div></div>
+              <button onClick="{{ onCreate }}" style="width:100%;margin-top:16px;padding:13px;border:none;background:#E4002B;color:#fff;font-size:14px;font-weight:700;border-radius:11px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>견적서 생성</button>
+              <button style="width:100%;margin-top:8px;padding:11px;border:1px solid #2B2F38;background:transparent;color:#B9C0CB;font-size:13px;font-weight:600;border-radius:11px;cursor:pointer;">견적 저장</button>
+            </div>
+          </div>
+          <div style="margin-top:12px;padding:13px 16px;background:#fff;border:1px solid #EAECEF;border-radius:12px;font-size:11.5px;color:#9AA0AB;line-height:1.55;">보조금·취득세는 지역/시기별로 변동될 수 있으며 실제 계약 금액과 차이가 있을 수 있습니다.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  seriesData = {
+    'ATTO 3': [
+      { name: 'ATTO 3', price: 31500000, battery: '49.92kWh', range: '321km' },
+      { name: 'ATTO 3 Plus', price: 33500000, battery: '60.48kWh', range: '321km' },
+    ],
+    'DOLPHIN': [
+      { name: 'DOLPHIN 액티브', price: 28500000, battery: '44.9kWh', range: '314km' },
+      { name: 'DOLPHIN 노블', price: 31900000, battery: '60.4kWh', range: '405km' },
+    ],
+    'SEAL': [
+      { name: 'SEAL Plus', price: 47000000, battery: '82.5kWh', range: '510km' },
+      { name: 'SEAL AWD', price: 52600000, battery: '82.5kWh', range: '470km' },
+    ],
+    'SEALION 7': [
+      { name: 'SEALION 7 Plus', price: 57000000, battery: '91.3kWh', range: '502km' },
+    ],
+  };
+  extColors = ['Ski White', 'Cosmos Black', 'Aurora White', 'Shark Grey', 'Surf Blue'];
+  intColors = ['Black', 'Grey'];
+  companies = { '하나캐피탈': 0.0668, 'BYD파이낸셜': 0.049, 'KB캐피탈': 0.059, '삼성카드': 0.039 };
+
+  state = {
+    customerName: '홍길동', dealership: 'BYD 서초 전시장', manager: '남광희', managerPhone: '010-0000-0000',
+    series: 'ATTO 3', model: 'ATTO 3 Plus', extColor: 'Ski White', intColor: 'Black',
+    fees: {
+      taksong: { label: '탁송료', amount: 75900, mode: '별도', manual: false },
+      etc: { label: '기타등록비', amount: 66900, mode: '별도', manual: false },
+      acq: { label: '취득세', amount: 0, mode: '별도', manual: false, exempt: false },
+    },
+    discount: 0, bond: 0, sido: '특별시/광역시', sigun: '서울', gov: 1260000, local: 370000,
+    addSub: { convert: false, youth: false, multichild: false, taxi: false },
+    finance: '할부', financeCompany: '하나캐피탈', loanMonths: '36개월', downType: '%', downValue: 0, memo: '',
+  };
+
+  fmt(n){ return (Math.round(n)||0).toLocaleString('ko-KR'); }
+  digits(v){ return Number(String(v==null?'':v).replace(/[^0-9]/g,''))||0; }
+  setField = (k) => (e) => this.setState({[k]:e.target.value});
+  setNum = (k) => (e) => this.setState({[k]:this.digits(e.target.value)});
+  onSeries = (e) => { const s=e.target.value; const m=this.seriesData[s]||[]; this.setState({series:s,model:m[0]?m[0].name:''}); };
+  onModel = (e) => this.setState({model:e.target.value});
+  setFeeMode = (k,m) => this.setState(st=>({fees:{...st.fees,[k]:{...st.fees[k],mode:m}}}));
+  toggleManual = (k) => this.setState(st=>({fees:{...st.fees,[k]:{...st.fees[k],manual:!st.fees[k].manual}}}));
+  toggleExempt = () => this.setState(st=>({fees:{...st.fees,acq:{...st.fees.acq,exempt:!st.fees.acq.exempt}}}));
+  toggleAddSub = (k) => this.setState(st=>({addSub:{...st.addSub,[k]:!st.addSub[k]}}));
+  onReset = () => this.setState({ customerName:'', series:'', model:'', discount:0, bond:0, gov:0, local:0, addSub:{convert:false,youth:false,multichild:false,taxi:false}, finance:'현금', downValue:0, memo:'', fees:{ taksong:{label:'탁송료',amount:75900,mode:'별도',manual:false}, etc:{label:'기타등록비',amount:66900,mode:'별도',manual:false}, acq:{label:'취득세',amount:0,mode:'별도',manual:false,exempt:false} } });
+  onCreate = () => {};
+  monthlyPayment(p,ar,m){ if(!m||p<=0)return 0; const r=ar/12; return Math.round(p*r*Math.pow(1+r,m)/(Math.pow(1+r,m)-1)); }
+
+  renderVals(){
+    const st=this.state; const fmt=(n)=>this.fmt(n);
+    const seriesList=Object.keys(this.seriesData);
+    const models=this.seriesData[st.series]||[];
+    const modelList=models.map(m=>m.name);
+    const mo=models.find(m=>m.name===st.model);
+    const carPrice=mo?mo.price:0, batteryText=mo?mo.battery:'—', rangeText=mo?mo.range:'—';
+
+    const acq=st.fees.acq.exempt?0:Math.max(0,Math.round(carPrice/1.1*0.07)-1400000);
+    const feeAmt={taksong:st.fees.taksong.amount,etc:st.fees.etc.amount,acq:acq};
+    const feeTotal=feeAmt.taksong+feeAmt.etc+feeAmt.acq;
+
+    const chipBase='padding:3px 9px;border:1px solid #E4E7EC;border-radius:7px;background:#fff;color:#9AA0AB;font-size:11.5px;font-weight:600;cursor:pointer;';
+    const chipOn='padding:3px 9px;border:1px solid #E4002B;border-radius:7px;background:#FDECEF;color:#E4002B;font-size:11.5px;font-weight:600;cursor:pointer;';
+    const segBase='padding:5px 12px;font-size:12px;font-weight:600;border:none;background:transparent;color:#6B7280;cursor:pointer;border-radius:6px;';
+    const segOn='padding:5px 12px;font-size:12px;font-weight:700;border:none;background:#1E2128;color:#fff;cursor:pointer;border-radius:6px;';
+
+    const feeRows=Object.keys(st.fees).map((k)=>{ const f=st.fees[k]; const isAcq=k==='acq'; const amountText=(isAcq&&f.exempt)?'면세':fmt(feeAmt[k])+'원';
+      return { key:k, label:f.label, amountText, isAcq, manualChipStyle:f.manual?chipOn:chipBase, exemptChipStyle:(isAcq&&f.exempt)?chipOn:chipBase, bydoStyle:f.mode==='별도'?segOn:segBase, daechulStyle:f.mode==='대출'?segOn:segBase, toggleManual:()=>this.toggleManual(k), toggleExempt:()=>this.toggleExempt(), setBydo:()=>this.setFeeMode(k,'별도'), setDaechul:()=>this.setFeeMode(k,'대출') }; });
+
+    const youthAmt=Math.round(st.gov*0.2);
+    const addAmt={ convert:st.addSub.convert?200000:0, youth:st.addSub.youth?youthAmt:0, multichild:st.addSub.multichild?1000000:0, taxi:st.addSub.taxi?2500000:0 };
+    const addTotal=addAmt.convert+addAmt.youth+addAmt.multichild+addAmt.taxi;
+
+    const cardBase='display:flex;align-items:center;gap:11px;padding:11px 13px;border-radius:11px;border:1.5px solid transparent;cursor:pointer;';
+    const boxBase='width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;';
+    const mkCard=(c)=>cardBase+(c?'background:#FDECEF;border-color:#E4002B;':'background:#FAFBFC;border-color:#EEF0F2;');
+    const mkBox=(c)=>boxBase+(c?'background:#E4002B;border:1.5px solid #E4002B;':'background:#fff;border:1.5px solid #D3DAE0;');
+    const addMeta=[ {key:'convert',label:'전환지원금 (폐차)',amountLabel:'+20만원'}, {key:'youth',label:'청년 생애최초',amountLabel:'국고 20%'}, {key:'multichild',label:'다자녀',amountLabel:'+100만원'}, {key:'taxi',label:'택시 보조금',amountLabel:'+250만원'} ];
+    const addSubList=addMeta.map(m=>({ key:m.key, label:m.label, amountLabel:m.amountLabel, checked:st.addSub[m.key], cardStyle:mkCard(st.addSub[m.key]), boxStyle:mkBox(st.addSub[m.key]), onToggle:()=>this.toggleAddSub(m.key) }));
+
+    const subsidyTotal=st.gov+st.local+addTotal;
+    let subsidyBreakdown='국고 '+fmt(st.gov)+' · 지자체 '+fmt(st.local);
+    if(addTotal>0) subsidyBreakdown+=' · 추가 '+fmt(addTotal);
+    const finalPrice=Math.max(0,carPrice+feeTotal+st.bond-st.discount-subsidyTotal);
+
+    const isLoan=st.finance==='할부'; const isLease=st.finance==='운용리스'||st.finance==='장기렌트';
+    const rate=this.companies[st.financeCompany]||0.059; const months=this.digits(st.loanMonths);
+    let downAmt=0, principal=finalPrice;
+    if(st.downType==='대출금'){ principal=st.downValue>0?st.downValue:finalPrice; downAmt=Math.max(0,finalPrice-principal); }
+    else { downAmt=st.downType==='%'?Math.round(finalPrice*st.downValue/100):st.downValue; principal=Math.max(0,finalPrice-downAmt); }
+    const loanMonthly=this.monthlyPayment(principal,rate,months);
+    const loanFee=months?Math.max(0,loanMonthly*months-principal):0;
+
+    let monthlyText='—', monthlyCaption='월 예상 납입금', showMonthly=false;
+    if(isLoan&&months&&principal>0){ monthlyText=fmt(loanMonthly)+'원'; monthlyCaption='월 납입금 · '+months+'개월'; showMonthly=true; }
+    else if(isLease){ monthlyText='별도 상담'; monthlyCaption=st.finance+' 월 납입료'; showMonthly=true; }
+    const downText=st.downType==='%'?String(st.downValue):fmt(st.downValue);
+
+    const summaryLines=[ {label:'차량 기본가',value:fmt(carPrice)+'원',color:'#DFE3EA'}, {label:'부대비용',value:'+ '+fmt(feeTotal)+'원',color:'#DFE3EA'} ];
+    if(st.bond>0) summaryLines.push({label:'공채',value:'+ '+fmt(st.bond)+'원',color:'#DFE3EA'});
+    if(st.discount>0) summaryLines.push({label:'할인',value:'− '+fmt(st.discount)+'원',color:'#FF8A9C'});
+    summaryLines.push({label:'전기차 보조금',value:'− '+fmt(subsidyTotal)+'원',color:'#5FD6A0'});
+
+    const vehicleLabel=st.model||(st.series||'차량 미선택');
+    const colorLabel=(st.extColor||'—')+' / '+(st.intColor||'—');
+    const railMonthlyStyle=showMonthly?'margin-top:12px;padding:11px 13px;border-radius:11px;background:rgba(255,90,118,.1);border:1px solid rgba(255,90,118,.2);':'display:none;';
+    const companyWrapStyle=(isLoan||isLease)?'':'visibility:hidden;';
+    const loanPanelStyle=isLoan?'margin-top:14px;border:1px solid #EAECEF;border-radius:12px;overflow:hidden;':'display:none;';
+    const dseg=(a)=>a?'padding:4px 10px;font-size:11.5px;font-weight:700;border:none;background:#1E2128;color:#fff;cursor:pointer;border-radius:6px;':'padding:4px 10px;font-size:11.5px;font-weight:600;border:none;background:transparent;color:#6B7280;cursor:pointer;border-radius:6px;';
+
+    return {
+      customerName:st.customerName, dealership:st.dealership, manager:st.manager, managerPhone:st.managerPhone,
+      onCustomerName:this.setField('customerName'), onDealership:this.setField('dealership'), onManager:this.setField('manager'), onManagerPhone:this.setField('managerPhone'),
+      seriesList, modelList, series:st.series, model:st.model, onSeries:this.onSeries, onModel:this.onModel,
+      extColor:st.extColor, intColor:st.intColor, extColorList:this.extColors, intColorList:this.intColors, onExtColor:this.setField('extColor'), onIntColor:this.setField('intColor'),
+      carPriceText:fmt(carPrice)+'원', batteryText, rangeText,
+      feeRows, discountText:fmt(st.discount), bondText:fmt(st.bond), onDiscount:this.setNum('discount'), onBond:this.setNum('bond'),
+      sido:st.sido, sigun:st.sigun, sidoList:['특별시/광역시','경기도','강원특별자치도','충청북도','충청남도','전북특별자치도','전라남도','경상북도','경상남도','제주특별자치도'], sigunList:['서울','부산','대구','인천','광주','대전','울산','세종','수원','성남','용인'],
+      onSido:this.setField('sido'), onSigun:this.setField('sigun'), govText:fmt(st.gov), localText:fmt(st.local), onGov:this.setNum('gov'), onLocal:this.setNum('local'),
+      addSubList, subsidyBreakdown, subsidyTotalText:fmt(subsidyTotal)+'원',
+      financeList:['현금','할부','운용리스','장기렌트'], finance:st.finance, onFinance:this.setField('finance'),
+      companyList:Object.keys(this.companies), financeCompany:st.financeCompany, onFinanceCompany:this.setField('financeCompany'), companyWrapStyle, loanPanelStyle,
+      monthsList:['12개월','24개월','36개월','48개월','60개월','72개월'], loanMonths:st.loanMonths, onLoanMonths:this.setField('loanMonths'),
+      downText, onDownValue:this.setNum('downValue'), dtPctStyle:dseg(st.downType==='%'), dtWonStyle:dseg(st.downType==='원'), dtLoanStyle:dseg(st.downType==='대출금'),
+      onDownPct:()=>this.setState({downType:'%'}), onDownWon:()=>this.setState({downType:'원'}), onDownLoan:()=>this.setState({downType:'대출금'}),
+      loanAmountText:fmt(principal)+'원', loanFeeText:fmt(loanFee)+'원', loanMonthlyText:months?fmt(loanMonthly)+'원':'—', rateText:(rate*100).toFixed(2)+'%',
+      memo:st.memo, onMemo:this.setField('memo'),
+      summaryLines, finalText:fmt(finalPrice), vehicleLabel, colorLabel, monthlyText, monthlyCaption, railMonthlyStyle,
+      onReset:this.onReset, onCreate:this.onCreate,
+    };
+  }
+}
+</script>
+</body>
+</html>

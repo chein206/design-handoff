@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design Handoff — 남광희</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Pretendard,-apple-system,'Malgun Gothic',sans-serif;background:#F3F4F6;color:#1A1C20;
+       line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:940px;margin:0 auto;padding:56px 24px 80px}
+  header{margin-bottom:40px}
+  .eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;color:#E4002B;margin-bottom:10px}
+  h1{font-size:30px;font-weight:800;letter-spacing:-.03em;margin-bottom:14px}
+  .lead{font-size:15px;color:#4B5563;max-width:640px}
+  .lead b{color:#1A1C20}
+  .note{margin-top:18px;padding:12px 15px;background:#fff;border:1px solid #EAECEF;border-radius:10px;
+        font-size:12.5px;color:#6B7280}
+  section{margin-top:36px}
+  h2{font-size:17px;font-weight:800;margin-bottom:6px}
+  .sub{font-size:13px;color:#6B7280;margin-bottom:16px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:11px}
+  a.card{display:block;background:#fff;border:1px solid #EAECEF;border-radius:12px;padding:15px 16px;
+         text-decoration:none;color:inherit;transition:.15s}
+  a.card:hover{border-color:#E4002B;box-shadow:0 2px 10px rgba(228,0,43,.07);transform:translateY(-1px)}
+  .num{font-size:10px;font-weight:800;color:#AAB1BD;letter-spacing:.1em}
+  .nm{font-size:14.5px;font-weight:700;margin:3px 0 4px}
+  .ds{font-size:12px;color:#6B7280;line-height:1.5}
+  .tag{display:inline-block;margin-top:7px;font-size:10px;font-weight:700;color:#E4002B;
+       background:#FDECEF;border-radius:4px;padding:2px 6px}
+  .docs{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}
+  .docs a{font-size:12.5px;font-weight:600;color:#1A1C20;background:#fff;border:1px solid #EAECEF;
+          border-radius:8px;padding:8px 13px;text-decoration:none}
+  .docs a:hover{border-color:#1A1C20}
+  footer{margin-top:52px;padding-top:20px;border-top:1px solid #E4E7EC;font-size:12.5px;color:#8A93A0}
+  footer a{color:#4B5563}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">DESIGN HANDOFF</div>
+  <h1>개발자가 그대로 구현할 수 있는<br>UI 설계 문서</h1>
+  <p class="lead">
+    시안만 넘기면 구현 단계에서 질문이 쏟아집니다. 이 값은 몇 px인지, 이 상태일 땐 어떻게 보이는지,
+    데이터가 없으면 뭘 띄우는지. 그래서 <b>시안과 함께 토큰 · 상태 · 정책 · 예외를 같이 넘기는 문서</b>를 만들어 왔습니다.
+  </p>
+  <div class="note">
+    아래 화면은 실제로 클릭해 볼 수 있는 hifi 프로토타입입니다. 목업의 고객명 · 연락처 · 사업자정보는 전부 가상의 값으로 교체했습니다.
+  </div>
+</header>
+
+<section>
+  <h2>SCPAD BYD — 세일즈 콘솔 리디자인</h2>
+  <p class="sub">
+    자동차 영업사원용 견적 · CRM SaaS의 전면 UI 리디자인. 무채색 90% + 단일 강조색 + 넉넉한 여백으로 디자인 시스템을 새로 정의하고 8개 화면에 적용.
+    <b>PC(사이드바)와 모바일 PWA(탭바)를 별개 앱이 아니라 데이터로 연결</b>하는 구조.
+  </p>
+  <div class="grid">
+    <a class="card" href="scpad-redesign/screens/01-로그인.dc.html">
+      <div class="num">01</div><div class="nm">로그인</div>
+      <div class="ds">좌우 2분할. 브랜드 패널 + 폼, 앱 설치 안내 배너</div></a>
+    <a class="card" href="scpad-redesign/screens/02-대시보드.dc.html">
+      <div class="num">02</div><div class="nm">대시보드</div>
+      <div class="ds">KPI 4종 · 차종별 견적 막대 · 할부/현금 도넛</div></a>
+    <a class="card" href="scpad-redesign/screens/03-고객관리.dc.html">
+      <div class="num">03</div><div class="nm">고객관리 (PC)</div>
+      <div class="ds">파이프라인 리스트 · 상태 필터 · 출고의지 진행바</div></a>
+    <a class="card" href="scpad-redesign/screens/04-견적기.dc.html">
+      <div class="num">04</div><div class="nm">견적기</div>
+      <div class="ds">실시간 금액 계산 + sticky 요약 레일<span class="tag">계산 로직 포함</span></div></a>
+    <a class="card" href="scpad-redesign/screens/05-저장견적.dc.html">
+      <div class="num">05</div><div class="nm">저장견적</div>
+      <div class="ds">13컬럼 단일 라인 테이블 · 기간 필터<span class="tag">구현 주의사항</span></div></a>
+    <a class="card" href="scpad-redesign/screens/06-앱설치모달.dc.html">
+      <div class="num">06</div><div class="nm">앱 설치 모달</div>
+      <div class="ds">PWA 설치 안내 · QR · OS별 스텝</div></a>
+    <a class="card" href="scpad-redesign/screens/07-모바일-고객관리.dc.html">
+      <div class="num">07</div><div class="nm">모바일 고객관리</div>
+      <div class="ds">폰 프레임 · 지표 칩 · 고객 카드 리스트</div></a>
+    <a class="card" href="scpad-redesign/screens/08-모바일-설정.dc.html">
+      <div class="num">08</div><div class="nm">모바일 설정</div>
+      <div class="ds">인라인 폼을 그룹 목록형으로 재정리</div></a>
+  </div>
+  <div class="docs">
+    <a href="scpad-redesign/README.md">📄 핸드오프 문서 (토큰 · 레이아웃 · 상태 · 로직)</a>
+    <a href="https://app.scpadlab.com/demo">▶ 실제 서비스 데모</a>
+    <a href="https://github.com/chein206/scpad">코드</a>
+  </div>
+</section>
+
+<section>
+  <h2>워크보드 — 개인 작업 보드 UI 개선</h2>
+  <p class="sub">흩어진 작업을 한눈에 보는 마인드맵형 화이트보드의 UI 개선안.</p>
+  <div class="grid">
+    <a class="card" href="workboard/워크보드.dc.html">
+      <div class="num">01</div><div class="nm">워크보드</div>
+      <div class="ds">카드 · 그룹 프레임 · 상태 필터 · 상세 드로어</div></a>
+  </div>
+  <div class="docs">
+    <a href="workboard/README.md">📄 핸드오프 문서</a>
+  </div>
+</section>
+
+<footer>
+  남광희 · <a href="mailto:chein206@gmail.com">chein206@gmail.com</a> ·
+  <a href="https://github.com/chein206">github.com/chein206</a>
+</footer>
+
+</div>
+</body>
+</html>

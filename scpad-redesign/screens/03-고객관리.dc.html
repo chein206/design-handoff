@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;font-family:'Pretendard',-apple-system,sans-serif;background:#F3F4F6;color:#1A1C20;}
+    a{color:#E4002B;text-decoration:none;}
+    a:hover{color:#C10024;}
+    ::-webkit-scrollbar{width:10px;height:10px;}
+    ::-webkit-scrollbar-thumb{background:#d2d6dd;border-radius:8px;border:3px solid #F3F4F6;}
+    ::-webkit-scrollbar-thumb:hover{background:#bcc2cc;}
+  </style>
+</helmet>
+
+<div style="display:flex;height:100vh;width:100%;overflow:hidden;">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside style="width:248px;flex-shrink:0;height:100vh;background:#1E2128;display:flex;flex-direction:column;">
+    <div style="padding:22px 22px 18px;">
+      <div style="font-size:17px;font-weight:800;color:#fff;letter-spacing:.02em;">BYD <span style="color:#E4002B;">SCPAD</span></div>
+      <div style="font-size:10.5px;color:#6C7381;margin-top:3px;letter-spacing:.04em;font-weight:500;">Sales Console</div>
+    </div>
+
+    <nav style="flex:1;overflow-y:auto;padding:4px 12px;">
+      <a href="02-대시보드.dc.html" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:9px;color:#AAB1BD;font-size:13.5px;font-weight:500;margin-bottom:2px;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.4"/><rect x="14" y="3" width="7" height="5" rx="1.4"/><rect x="14" y="12" width="7" height="9" rx="1.4"/><rect x="3" y="16" width="7" height="5" rx="1.4"/></svg>
+        대시보드
+      </a>
+
+      <div style="font-size:10px;font-weight:700;color:#565C68;letter-spacing:.1em;padding:16px 12px 7px;">고객</div>
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:9px;background:rgba(228,0,43,.14);box-shadow:inset 2.5px 0 0 #E4002B;color:#fff;font-size:13.5px;font-weight:700;margin-bottom:2px;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#FF5A76" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>
+        <span style="flex:1;">고객관리</span>
+        <span style="font-size:11px;font-weight:700;color:#fff;background:#E4002B;padding:1px 8px;border-radius:20px;">10</span>
+      </a>
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:9px;color:#AAB1BD;font-size:13.5px;font-weight:500;margin-bottom:2px;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
+        <span style="flex:1;">팔로업</span>
+      </a>
+
+      <div style="font-size:10px;font-weight:700;color:#565C68;letter-spacing:.1em;padding:16px 12px 7px;">견적</div>
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:9px;color:#AAB1BD;font-size:13.5px;font-weight:500;margin-bottom:2px;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        견적기
+      </a>
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:9px;color:#AAB1BD;font-size:13.5px;font-weight:500;margin-bottom:2px;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        <span style="flex:1;">저장 견적</span>
+        <span style="font-size:11px;font-weight:700;color:#C9CED7;background:#31353E;padding:1px 8px;border-radius:20px;">43</span>
+      </a>
+    </nav>
+
+    <div style="padding:8px 12px 6px;border-top:1px solid #2B2F38;">
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:9px;color:#868D99;font-size:12.5px;font-weight:500;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        관리자 쪽지
+      </a>
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:9px;color:#868D99;font-size:12.5px;font-weight:500;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+        문의하기
+      </a>
+    </div>
+
+    <div style="padding:12px;border-top:1px solid #2B2F38;">
+      <div style="display:flex;align-items:center;gap:11px;padding:8px;border-radius:11px;">
+        <div style="width:36px;height:36px;border-radius:10px;background:#31353E;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#E7EAEF;flex-shrink:0;">남</div>
+        <div style="min-width:0;flex:1;">
+          <div style="display:flex;align-items:center;gap:6px;">
+            <span style="font-size:13px;font-weight:700;color:#fff;">남광희</span>
+            <span style="font-size:9px;font-weight:800;color:#1E2128;background:#C8CDD5;padding:1px 5px;border-radius:4px;">MAX</span>
+          </div>
+          <div style="font-size:10.5px;color:#6C7381;margin-top:1px;">BYD 서초 전시장</div>
+        </div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6C7381" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <div style="flex:1;display:flex;flex-direction:column;min-width:0;height:100vh;">
+
+    <header style="flex-shrink:0;height:64px;background:#fff;border-bottom:1px solid #EAECEF;display:flex;align-items:center;padding:0 28px;gap:18px;">
+      <div>
+        <div style="font-size:11px;color:#9AA0AB;font-weight:500;">고객</div>
+        <div style="font-size:18px;font-weight:800;letter-spacing:-.02em;margin-top:-1px;">고객관리</div>
+      </div>
+      <div style="flex:1;"></div>
+      <button style="display:flex;align-items:center;gap:7px;height:40px;padding:0 13px;border:1px solid #EAECEF;background:#fff;color:#4B5563;font-size:12.5px;font-weight:600;border-radius:10px;cursor:pointer;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4B5563" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3M20 20h.01M17 20h.01M20 17h.01"/></svg>
+        모바일로 열기
+      </button>
+      <button style="display:flex;align-items:center;gap:7px;padding:10px 17px;border:none;background:#E4002B;color:#fff;font-size:13px;font-weight:700;border-radius:10px;cursor:pointer;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+        새 고객
+      </button>
+    </header>
+
+    <div style="flex:1;overflow-y:auto;padding:24px 28px 48px;">
+      <div style="max-width:1080px;">
+
+        <!-- STAT ROW -->
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;">
+          <div style="background:#fff;border:1px solid #EAECEF;border-radius:13px;padding:15px 18px;">
+            <div style="font-size:12px;color:#6B7280;font-weight:600;">전체 고객</div>
+            <div style="font-size:24px;font-weight:800;margin-top:6px;font-variant-numeric:tabular-nums;">10</div>
+          </div>
+          <div style="background:#fff;border:1px solid #EAECEF;border-radius:13px;padding:15px 18px;">
+            <div style="font-size:12px;color:#6B7280;font-weight:600;">팔로업 필요</div>
+            <div style="font-size:24px;font-weight:800;margin-top:6px;font-variant-numeric:tabular-nums;color:#0E9F6E;">0</div>
+          </div>
+          <div style="background:#fff;border:1px solid #EAECEF;border-radius:13px;padding:15px 18px;">
+            <div style="font-size:12px;color:#6B7280;font-weight:600;">이번달 계약</div>
+            <div style="font-size:24px;font-weight:800;margin-top:6px;font-variant-numeric:tabular-nums;">0</div>
+          </div>
+          <div style="background:#fff;border:1px solid #EAECEF;border-radius:13px;padding:15px 18px;">
+            <div style="font-size:12px;color:#6B7280;font-weight:600;">이번달 출고</div>
+            <div style="font-size:24px;font-weight:800;margin-top:6px;font-variant-numeric:tabular-nums;">0</div>
+          </div>
+          <div style="background:#fff;border:1px solid #EAECEF;border-radius:13px;padding:15px 18px;">
+            <div style="font-size:12px;color:#6B7280;font-weight:600;">누적 출고</div>
+            <div style="font-size:24px;font-weight:800;margin-top:6px;font-variant-numeric:tabular-nums;">2</div>
+          </div>
+        </div>
+
+        <!-- SEARCH + FILTERS -->
+        <div style="margin-top:16px;display:flex;align-items:center;gap:9px;background:#fff;border:1px solid #EAECEF;border-radius:11px;padding:11px 15px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9AA0AB" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <span style="font-size:13.5px;color:#9AA0AB;">이름, 차종, 연락처 검색</span>
+        </div>
+
+        <div style="margin-top:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <button style="padding:7px 15px;border:none;background:#1E2128;color:#fff;font-size:12.5px;font-weight:700;border-radius:20px;cursor:pointer;font-family:inherit;">전체 <span style="opacity:.6;">10</span></button>
+          <button style="padding:7px 15px;border:1px solid #E4E7EC;background:#fff;color:#4B5563;font-size:12.5px;font-weight:600;border-radius:20px;cursor:pointer;font-family:inherit;">신규 <span style="color:#9AA0AB;">4</span></button>
+          <button style="padding:7px 15px;border:1px solid #E4E7EC;background:#fff;color:#4B5563;font-size:12.5px;font-weight:600;border-radius:20px;cursor:pointer;font-family:inherit;">진행중 <span style="color:#9AA0AB;">0</span></button>
+          <button style="padding:7px 15px;border:1px solid #E4E7EC;background:#fff;color:#4B5563;font-size:12.5px;font-weight:600;border-radius:20px;cursor:pointer;font-family:inherit;">계약 <span style="color:#9AA0AB;">2</span></button>
+          <button style="padding:7px 15px;border:1px solid #E4E7EC;background:#fff;color:#4B5563;font-size:12.5px;font-weight:600;border-radius:20px;cursor:pointer;font-family:inherit;">출고완료 <span style="color:#9AA0AB;">2</span></button>
+          <button style="padding:7px 15px;border:1px solid #E4E7EC;background:#fff;color:#4B5563;font-size:12.5px;font-weight:600;border-radius:20px;cursor:pointer;font-family:inherit;">장기관리 <span style="color:#9AA0AB;">1</span></button>
+          <button style="padding:7px 15px;border:1px solid #E4E7EC;background:#fff;color:#4B5563;font-size:12.5px;font-weight:600;border-radius:20px;cursor:pointer;font-family:inherit;">해약 <span style="color:#9AA0AB;">1</span></button>
+        </div>
+
+        <!-- LIST -->
+        <div style="margin-top:14px;background:#fff;border:1px solid #EAECEF;border-radius:14px;overflow:hidden;">
+
+          <!-- row template -->
+          <div style="display:flex;align-items:center;gap:16px;padding:16px 22px;border-bottom:1px solid #F1F2F4;">
+            <div style="width:42px;height:42px;border-radius:11px;background:#F3F4F6;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#4B5563;flex-shrink:0;">엄</div>
+            <div style="width:180px;flex-shrink:0;">
+              <div style="display:flex;align-items:center;gap:7px;">
+                <span style="font-size:14.5px;font-weight:700;">오지우</span>
+                <span style="font-size:10.5px;font-weight:700;color:#2563EB;background:#EAF0FE;padding:1px 7px;border-radius:5px;">신규</span>
+              </div>
+              <div style="font-size:12px;color:#9AA0AB;margin-top:3px;font-variant-numeric:tabular-nums;">010-0000-0000 · 서울</div>
+            </div>
+            <div style="flex:1;min-width:0;">
+              <div style="font-size:13px;font-weight:600;">SEALION 7 Plus</div>
+              <div style="font-size:11.5px;color:#9AA0AB;margin-top:3px;">Aurora White · 내방 · 저장 05.18</div>
+            </div>
+            <div style="width:130px;flex-shrink:0;">
+              <div style="display:flex;align-items:center;justify-content:space-between;font-size:11px;margin-bottom:5px;"><span style="color:#9AA0AB;font-weight:600;">출고의지</span><span style="font-weight:700;font-variant-numeric:tabular-nums;">30%</span></div>
+              <div style="height:6px;background:#F0F1F3;border-radius:4px;overflow:hidden;"><div style="width:30%;height:100%;background:#C8CDD5;border-radius:4px;"></div></div>
+            </div>
+            <div style="width:96px;text-align:right;flex-shrink:0;font-size:11.5px;color:#9AA0AB;">상담 51일 전</div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:16px;padding:16px 22px;border-bottom:1px solid #F1F2F4;">
+            <div style="width:42px;height:42px;border-radius:11px;background:#F3F4F6;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#4B5563;flex-shrink:0;">김</div>
+            <div style="width:180px;flex-shrink:0;">
+              <div style="display:flex;align-items:center;gap:7px;">
+                <span style="font-size:14.5px;font-weight:700;">김서연</span>
+                <span style="font-size:10.5px;font-weight:700;color:#2563EB;background:#EAF0FE;padding:1px 7px;border-radius:5px;">신규</span>
+              </div>
+              <div style="font-size:12px;color:#9AA0AB;margin-top:3px;font-variant-numeric:tabular-nums;">010-0000-0000 · 서울</div>
+            </div>
+            <div style="flex:1;min-width:0;">
+              <div style="font-size:13px;font-weight:600;">DOLPHIN</div>
+              <div style="font-size:11.5px;color:#9AA0AB;margin-top:3px;">Ski White / Black · 전화 · 저장 05.17</div>
+            </div>
+            <div style="width:130px;flex-shrink:0;">
+              <div style="display:flex;align-items:center;justify-content:space-between;font-size:11px;margin-bottom:5px;"><span style="color:#9AA0AB;font-weight:600;">출고의지</span><span style="font-weight:700;font-variant-numeric:tabular-nums;">30%</span></div>
+              <div style="height:6px;background:#F0F1F3;border-radius:4px;overflow:hidden;"><div style="width:30%;height:100%;background:#C8CDD5;border-radius:4px;"></div></div>
+            </div>
+            <div style="width:96px;text-align:right;flex-shrink:0;font-size:11.5px;color:#9AA0AB;">상담 50일 전</div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:16px;padding:16px 22px;border-bottom:1px solid #F1F2F4;">
+            <div style="width:42px;height:42px;border-radius:11px;background:#F3F4F6;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#4B5563;flex-shrink:0;">이</div>
+            <div style="width:180px;flex-shrink:0;">
+              <div style="display:flex;align-items:center;gap:7px;">
+                <span style="font-size:14.5px;font-weight:700;">이시우</span>
+                <span style="font-size:10.5px;font-weight:700;color:#fff;background:#1E2128;padding:1px 7px;border-radius:5px;">계약</span>
+              </div>
+              <div style="font-size:12px;color:#9AA0AB;margin-top:3px;font-variant-numeric:tabular-nums;">010-0000-0000 · 경기 광주시</div>
+            </div>
+            <div style="flex:1;min-width:0;">
+              <div style="font-size:13px;font-weight:600;">SEALION 7 Plus</div>
+              <div style="font-size:11.5px;color:#9AA0AB;margin-top:3px;">Shark Grey · 블로그 · 저장 04.06</div>
+            </div>
+            <div style="width:130px;flex-shrink:0;">
+              <div style="display:flex;align-items:center;justify-content:space-between;font-size:11px;margin-bottom:5px;"><span style="color:#9AA0AB;font-weight:600;">출고의지</span><span style="font-weight:700;font-variant-numeric:tabular-nums;color:#0E9F6E;">100%</span></div>
+              <div style="height:6px;background:#F0F1F3;border-radius:4px;overflow:hidden;"><div style="width:100%;height:100%;background:#0E9F6E;border-radius:4px;"></div></div>
+            </div>
+            <div style="width:96px;text-align:right;flex-shrink:0;font-size:11.5px;color:#E4002B;font-weight:600;">팔로업 지남</div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:16px;padding:16px 22px;border-bottom:1px solid #F1F2F4;">
+            <div style="width:42px;height:42px;border-radius:11px;background:#F3F4F6;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#4B5563;flex-shrink:0;">우</div>
+            <div style="width:180px;flex-shrink:0;">
+              <div style="display:flex;align-items:center;gap:7px;">
+                <span style="font-size:14.5px;font-weight:700;">유준호</span>
+                <span style="font-size:10.5px;font-weight:700;color:#fff;background:#1E2128;padding:1px 7px;border-radius:5px;">계약</span>
+              </div>
+              <div style="font-size:12px;color:#9AA0AB;margin-top:3px;font-variant-numeric:tabular-nums;">010-0000-0000 · 인천</div>
+            </div>
+            <div style="flex:1;min-width:0;">
+              <div style="font-size:13px;font-weight:600;">SEALION 7 Plus</div>
+              <div style="font-size:11.5px;color:#9AA0AB;margin-top:3px;">Aurora White · 다나와 · 저장 04.23</div>
+            </div>
+            <div style="width:130px;flex-shrink:0;">
+              <div style="display:flex;align-items:center;justify-content:space-between;font-size:11px;margin-bottom:5px;"><span style="color:#9AA0AB;font-weight:600;">출고의지</span><span style="font-weight:700;font-variant-numeric:tabular-nums;">50%</span></div>
+              <div style="height:6px;background:#F0F1F3;border-radius:4px;overflow:hidden;"><div style="width:50%;height:100%;background:#C8CDD5;border-radius:4px;"></div></div>
+            </div>
+            <div style="width:96px;text-align:right;flex-shrink:0;font-size:11.5px;color:#9AA0AB;">상담 46일 전</div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:16px;padding:16px 22px;border-bottom:1px solid #F1F2F4;">
+            <div style="width:42px;height:42px;border-radius:11px;background:#F3F4F6;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#4B5563;flex-shrink:0;">채</div>
+            <div style="width:180px;flex-shrink:0;">
+              <div style="display:flex;align-items:center;gap:7px;">
+                <span style="font-size:14.5px;font-weight:700;">최도현</span>
+                <span style="font-size:10.5px;font-weight:700;color:#B45309;background:#FEF3E2;padding:1px 7px;border-radius:5px;">장기관리</span>
+              </div>
+              <div style="font-size:12px;color:#9AA0AB;margin-top:3px;font-variant-numeric:tabular-nums;">010-0000-0000 · 서울</div>
+            </div>
+            <div style="flex:1;min-width:0;">
+              <div style="font-size:13px;font-weight:600;">SEALION 7</div>
+              <div style="font-size:11.5px;color:#9AA0AB;margin-top:3px;">To do · 저장 05.21</div>
+            </div>
+            <div style="width:130px;flex-shrink:0;">
+              <div style="display:flex;align-items:center;justify-content:space-between;font-size:11px;margin-bottom:5px;"><span style="color:#9AA0AB;font-weight:600;">출고의지</span><span style="font-weight:700;font-variant-numeric:tabular-nums;">30%</span></div>
+              <div style="height:6px;background:#F0F1F3;border-radius:4px;overflow:hidden;"><div style="width:30%;height:100%;background:#C8CDD5;border-radius:4px;"></div></div>
+            </div>
+            <div style="width:96px;text-align:right;flex-shrink:0;font-size:11.5px;color:#9AA0AB;">상담 48일 전</div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:16px;padding:16px 22px;border-bottom:1px solid #F1F2F4;">
+            <div style="width:42px;height:42px;border-radius:11px;background:#F3F4F6;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#4B5563;flex-shrink:0;">한</div>
+            <div style="width:180px;flex-shrink:0;">
+              <div style="display:flex;align-items:center;gap:7px;">
+                <span style="font-size:14.5px;font-weight:700;">한예린</span>
+                <span style="font-size:10.5px;font-weight:700;color:#0E9F6E;background:#E7F7F0;padding:1px 7px;border-radius:5px;">출고완료</span>
+              </div>
+              <div style="font-size:12px;color:#9AA0AB;margin-top:3px;font-variant-numeric:tabular-nums;">010-0000-0000 · 서울</div>
+            </div>
+            <div style="flex:1;min-width:0;">
+              <div style="font-size:13px;font-weight:600;">SEALION 7 Plus</div>
+              <div style="font-size:11.5px;color:#9AA0AB;margin-top:3px;">내방 · 저장 05.24</div>
+            </div>
+            <div style="width:130px;flex-shrink:0;">
+              <div style="display:flex;align-items:center;justify-content:space-between;font-size:11px;margin-bottom:5px;"><span style="color:#9AA0AB;font-weight:600;">출고의지</span><span style="font-weight:700;font-variant-numeric:tabular-nums;">50%</span></div>
+              <div style="height:6px;background:#F0F1F3;border-radius:4px;overflow:hidden;"><div style="width:50%;height:100%;background:#C8CDD5;border-radius:4px;"></div></div>
+            </div>
+            <div style="width:96px;text-align:right;flex-shrink:0;font-size:11.5px;color:#9AA0AB;">출고 28일 후</div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:16px;padding:16px 22px;">
+            <div style="width:42px;height:42px;border-radius:11px;background:#F3F4F6;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#9AA0AB;flex-shrink:0;">김</div>
+            <div style="width:180px;flex-shrink:0;">
+              <div style="display:flex;align-items:center;gap:7px;">
+                <span style="font-size:14.5px;font-weight:700;color:#6B7280;">김민준</span>
+                <span style="font-size:10.5px;font-weight:700;color:#9AA0AB;background:#F0F1F3;padding:1px 7px;border-radius:5px;">해약</span>
+              </div>
+              <div style="font-size:12px;color:#B4BAC3;margin-top:3px;font-variant-numeric:tabular-nums;">010-0000-0000 · 용인시</div>
+            </div>
+            <div style="flex:1;min-width:0;">
+              <div style="font-size:13px;font-weight:600;color:#9AA0AB;">SEALION 7 Plus</div>
+              <div style="font-size:11.5px;color:#B4BAC3;margin-top:3px;">Aurora White · 내방 · 저장 05.16</div>
+            </div>
+            <div style="width:130px;flex-shrink:0;">
+              <div style="display:flex;align-items:center;justify-content:space-between;font-size:11px;margin-bottom:5px;"><span style="color:#B4BAC3;font-weight:600;">출고의지</span><span style="font-weight:700;font-variant-numeric:tabular-nums;color:#B4BAC3;">0%</span></div>
+              <div style="height:6px;background:#F0F1F3;border-radius:4px;overflow:hidden;"></div>
+            </div>
+            <div style="width:96px;text-align:right;flex-shrink:0;font-size:11.5px;color:#E4002B;font-weight:600;">팔로업 지남</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
