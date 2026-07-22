@@ -321,22 +321,22 @@ class Component extends DCLogic {
     this.searchRef = React.createRef();
     this.PAL = ['#8a94a2','#60a5fa','#818cf8','#a78bfa','#22d3ee','#34d399','#a3e635','#fbbf24','#fb923c','#f87171','#f472b6','#e879f9'];
     const N = [
-      {id:'idea_hub', hub:true, title:'할만한 아이디어', accent:'#a78bfa', x:90, y:150, w:158, h:46},
-      {id:'idea1', title:'AI 지방 살리기 사업', accent:'#a78bfa', status:'아이디어', x:300, y:145, w:220, h:52},
+      {id:'idea_hub', hub:true, title:'다음 할 것', accent:'#a78bfa', x:90, y:150, w:158, h:46},
+      {id:'idea1', title:'상담 이력 RAG 코파일럿', accent:'#a78bfa', status:'설계중', x:300, y:145, w:220, h:52},
       {id:'done_hub', hub:true, title:'완료한 작업', accent:'#60a5fa', x:720, y:150, w:140, h:46},
-      {id:'palette', title:'팔레트 지원', accent:'#60a5fa', status:'결과 대기', subtitle:'제출 완료 · 심사 결과 대기 중', time:'오늘 작업', file:'README.md', x:960, y:108, w:250, h:96},
-      {id:'sohot', title:'소상공인 AI 지원사업', accent:'#8a94a2', x:960, y:236, w:238, h:48},
+      {id:'wheelfit', title:'휠타이어샵 비주얼라이저', accent:'#60a5fa', status:'납품 완료', subtitle:'차량 17종 × 휠 39항목 사전 생성 · 합성 174장', time:'2일 전', file:'ASSET-SPEC.md', x:960, y:108, w:250, h:96},
+      {id:'vcut', title:'Video Cutter', accent:'#8a94a2', status:'GUI 마감', x:960, y:236, w:238, h:48},
       {id:'wb', title:'워크보드', accent:'#34d399', status:'진행중', subtitle:'이 프로젝트! · 오늘 커밋', time:'오늘 작업', file:'scan_config.json', x:960, y:318, w:250, h:88, starred:true},
       {id:'my_hub', hub:true, title:'내 작업들', accent:'#34d399', x:90, y:600, w:140, h:46},
-      {id:'scpad', title:'SCPAD', accent:'#fb923c', status:'운영중', subtitle:'자동차 딜러 SaaS · feat: 세션 작업 일괄 — 결제(포트원/토스페이)·소셜로그인·견적서 개선', time:'4일 전', file:'commit a1f9', x:330, y:540, w:290, h:150, checklist:[{t:'결제 연동 (포트원/토스페이)',done:true},{t:'소셜 로그인',done:true},{t:'견적서 개선',done:false}]},
-      {id:'era', title:'Era', accent:'#34d399', status:'가동중', subtitle:'AI 데일리 다이제스트', time:'오늘 작업', file:'README.md', x:330, y:730, w:250, h:118, checklist:[{t:'다이제스트 파이프라인',done:true},{t:'요약 품질 개선',done:false}]},
-      {id:'l3', title:'L3: Eval 리포트', accent:'#a78bfa', status:'피드백 중', x:770, y:672, w:230, h:96, checklist:[{t:'프롬프트 튜닝',done:true},{t:'피드백 수집',done:false},{t:'리포트 자동화',done:false}]},
+      {id:'scpad', title:'SCPAD', accent:'#fb923c', status:'운영중', subtitle:'자동차 딜러 SaaS · 전시장 9곳 · 주간 활성 35명 · feat: 결제(포트원)·소셜로그인·견적서 개선', time:'4일 전', file:'commit a1f9', x:330, y:540, w:290, h:150, checklist:[{t:'결제 연동 (포트원)',done:true},{t:'소셜 로그인',done:true},{t:'AI 생성 로깅',done:false}]},
+      {id:'era', title:'Era', accent:'#34d399', status:'가동중', subtitle:'AI 뉴스 다이제스트 · Actions cron 무인 운영', time:'오늘 작업', file:'digest.py', x:330, y:730, w:250, h:118, checklist:[{t:'수집·요약 파이프라인',done:true},{t:'선별 프롬프트 A/B',done:false}]},
+      {id:'l3', title:'L3: Eval 데이터셋', accent:'#a78bfa', status:'수집중', x:770, y:672, w:230, h:96, checklist:[{t:'피드백 버튼 수거',done:true},{t:'발송 로그 조인',done:true},{t:'프롬프트 버전 비교',done:false}]},
       {id:'l4', title:'L4: 아카이브 RAG', accent:'#818cf8', x:770, y:772, w:210, h:48},
     ];
-    this.EDGES = [['idea_hub','idea1'],['done_hub','palette'],['done_hub','sohot'],['done_hub','wb'],['my_hub','scpad'],['my_hub','era'],['era','l3'],['era','l4']];
+    this.EDGES = [['idea_hub','idea1'],['done_hub','wheelfit'],['done_hub','vcut'],['done_hub','wb'],['my_hub','scpad'],['my_hub','era'],['era','l3'],['era','l4']];
     this.FRAMES = [
-      {id:'f_idea', label:'아이디어', color:'#a78bfa', members:['idea_hub','idea1']},
-      {id:'f_done', label:'완료한 작업', color:'#60a5fa', members:['done_hub','palette','sohot','wb']},
+      {id:'f_idea', label:'다음 할 것', color:'#a78bfa', members:['idea_hub','idea1']},
+      {id:'f_done', label:'완료한 작업', color:'#60a5fa', members:['done_hub','wheelfit','vcut','wb']},
       {id:'f_mine', label:'내 작업들', color:'#34d399', members:['my_hub','scpad','era','l3','l4']},
     ];
     this.state = { nodes:N, panX:60, panY:-90, scale:0.92, selectedId:'l3', selectedIds:['l3'], paletteOpen:false, detailOpen:false, query:'', cw:1200, ch:700, cnt:1, filterStatus:null, link:null, collapsed:{}, editingId:null, editTitle:'', selectedEdge:null, box:null, newCheck:'' };
